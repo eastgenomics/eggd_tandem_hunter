@@ -1,0 +1,4 @@
+*.coverage
+*__pycache__
+*.pytest_cache
+*.cvg_comparison.csv
