@@ -1,4 +1,6 @@
 # Tandem Hunter
+Originally developed by NEY GLH Bioinformatics Team.
+
 ## Identification of duplicated/amplified regions based on the comparison of normalise coverage between two intervals in given coverage file.
 
 ## Requirements
