@@ -2,14 +2,14 @@
    {
       "region1":{
          "chrom":"11",
-         "start":118471651,
-         "end":118474325,
+         "start":118471662,
+         "end":118474315,
          "name":"MLL_EXON3"
       },
       "region2":{
          "chrom":"11",
-         "start":118502387,
-         "end":118506656,
+         "start":118502398,
+         "end":118506646,
          "name":"MLL_EXON27"
       },
       "dup_threshold":1.122995
