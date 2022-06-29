@@ -88,7 +88,7 @@ def tdh_argument_parser(args):
     )
     parser.add_argument(
         "--cov-file-pattern",
-        default=".qc.coverage.txt",
+        default="coverage.tsv",
         help="Filename suffix used to identify coverage files when in batch mode",
     )
     parser.add_argument(
