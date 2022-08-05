@@ -55,36 +55,6 @@ def generate_PTD_KMT2A_df(args):
     merged_data = pd.concat(all_data)
     print(merged_data)
     exit
-    #print (KMT2A_dfs)
-
-    #KMT2A_dfs = pd.concat(map(KMT2A_dfs, file))
-    #print(type(KMT2A_dfs))
-    #need to merge dataframes
-    #print(type(KMT2A_dfs))
-    #PTD_KM2TA_1 = pd.concat([PTD_KM2TA_df,KMT2A_dfs])
-    #print(PTD_KM2TA_1)
-    #PTD_KM2TA_1 = PTD_KM2TA_df.append([KMT2A_dfs, PTD_KM2TA_df],ignore_index= True)
-    #print(PTD_KM2TA_1)
-    #PTD_KM2TA_1 = PTD_KM2TA_1.drop_duplicates(keep=False)
-    #print(PTD_KM2TA_1)
-    # check there are no duplicates in PTD_KM2TA_1
-    #print(PTD_KM2TA_1)
-    #lines = fh.readlines()[1:]#.Skip(1).FirstOrDefault()
-    #PTD_KM2TA_df = append(lines, )
-    #print(type(lines))
-    #print(lines)
-    #print(PTD_KM2TA_df)
-
-    #put tandemhunter output into df
-    #file_df = pd.read_csv(
-    #   file.name, delimiter=',', header=0)
-    #file_df = pd.DataFrame(lines)
-
-    #join data frames
-    #file_df = PTD_KM2TA_df
-
-    #check to ensure no duplicates
-    #assert
 
     return merged_data
 
