@@ -88,6 +88,7 @@ def generate_PTD_KMT2A_df(args):
 
     return merged_data
 
+
 def KM2TA_df_to_xls(PTD_KM2TA_1):
    """"Generates .xls spreadsheet with PTD predictions from TandemHunter
 
@@ -95,7 +96,12 @@ def KM2TA_df_to_xls(PTD_KM2TA_1):
    .xls file with fold coverage differences for normalized coverage for exons 3 and 27 of
    KM2TA gene and TRUE/FALSE statement to suggest if sample likely has PTDs
    """
-   PTD_KM2TA_1.to_excel()
+   PTD_KM2TA_1.to_excel("comparison_csv.xlsx")
+
+
+def main():
+   args = parse_args()
+   PTD_KM2TA_1 = generate_PTD_KMT2A_df(args)
 
 def main():
    args = parse_args()
