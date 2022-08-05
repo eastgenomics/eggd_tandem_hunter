@@ -103,12 +103,8 @@ def main():
    args = parse_args()
    PTD_KM2TA_1 = generate_PTD_KMT2A_df(args)
 
-def main():
-   args = parse_args()
-   PTD_KM2TA_1 = generate_PTD_KMT2A_df(args)
-
-    #write output bed file
-   KM2TA_df_to_xls(PTD_KM2TA_1, args.run)
+   #write output bed file
+   KM2TA_df_to_xls(PTD_KM2TA_1)
 
 
 if __name__ == "__main__":
