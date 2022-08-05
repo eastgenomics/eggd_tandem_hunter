@@ -17,7 +17,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
-        '--comparison_csv', type=argparse.FileType('r'), nargs="+", required=TRUE,
+        '--comparison_csv', type=argparse.FileType('r'), nargs="+", required=True,
         help='all cvg_comparison.csv files to generate .xls report for tandemhunter output'#better if give input directory
     )
     parser.add_argument(
