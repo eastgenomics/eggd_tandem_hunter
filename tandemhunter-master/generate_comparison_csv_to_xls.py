@@ -4,9 +4,7 @@ script to generate .xls file from a run of cvg_comparison.csv generated from Tan
 """
 
 import argparse
-from ast import Break
 from pathlib import Path
-from pickle import TRUE
 import pty
 import subprocess
 import os
