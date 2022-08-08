@@ -9,6 +9,7 @@ import pty
 import subprocess
 import os
 import sys
+import pytest
 
 import pandas as pd
 
@@ -48,13 +49,15 @@ def generate_PTD_KMT2A_df(args):
     #    else:
     #        df = pd.read_csv(file.name, delimiter=',') # , header=None, skiprows=[0])
         #df = pd.concat(map(pd.read_csv, file.name), ignore_index=True)
-        #print(index)
-        print(df)
+        #print(index)='[.]
+        #print(df)
         all_data.append(df)
-    print(all_data)
+    #print(all_data)
     merged_data = pd.concat(all_data)
     print(merged_data)
-    exit
+
+    #check df has no duplicate results
+    assert merged_data['sample_id'].is_unique, 'df has duplicate sample results'
 
     return merged_data
 
