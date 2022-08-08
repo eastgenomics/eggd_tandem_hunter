@@ -69,7 +69,7 @@ def KM2TA_df_to_xls(PTD_KM2TA_1):
    .xls file with fold coverage differences for normalized coverage for exons 3 and 27 of
    KM2TA gene and TRUE/FALSE statement to suggest if sample likely has PTDs
    """
-   PTD_KM2TA_1.to_excel("comparison_csv.xlsx")
+   PTD_KM2TA_1.to_excel("comparison_csv.xlsx", index = False)
 
 
 def main():
