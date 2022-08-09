@@ -19,7 +19,7 @@ def parse_args():
 
     parser.add_argument(
         '--comparison_csv', type=argparse.FileType('r'), nargs="+", required=True,
-        help='all cvg_comparison.csv files to generate .xls report for tandemhunter output'#better if give input directory
+        help='all cvg_comparison.csv files to generate .xls report for tandemhunter output'
     )
     parser.add_argument(
         '--run',
