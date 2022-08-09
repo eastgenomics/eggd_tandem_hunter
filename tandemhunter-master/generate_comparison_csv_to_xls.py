@@ -39,18 +39,11 @@ def generate_PTD_KMT2A_df(args):
     -PTD_KMT2A(df):df of normalized coverages for KMT2A exons 3 and 27, fold coverage difference
     between exons and algorithm predictions for PTDs in KMT2A (as either true/false)
     """
-    #create empty list for dataframes
+    #create empty list for data frames
     all_data = []
     for index, file in enumerate(args.comparison_csv):
         df = pd.read_csv(file.name, delimiter=',')
-    #for index,file in enumerate(args.comparison_csv):
-    #    if index == 0:
-    #        df = pd.read_csv(file.name, delimiter=',')
-    #    else:
-    #        df = pd.read_csv(file.name, delimiter=',') # , header=None, skiprows=[0])
-        #df = pd.concat(map(pd.read_csv, file.name), ignore_index=True)
-        #print(index)='[.]
-        #print(df)
+
         all_data.append(df)
     #print(all_data)
     merged_data = pd.concat(all_data)
