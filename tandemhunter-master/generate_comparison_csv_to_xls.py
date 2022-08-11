@@ -33,7 +33,7 @@ def parse_args():
     return args
 
 def generate_PTD_KMT2A_df(args):
-    """Generates dataframe from multiple per cvg_comparison.csv from tandemhunter
+    """Generates data frame from multiple per cvg_comparison.csv from tandemhunter
 
     Returns:
     -PTD_KMT2A(df):df of normalized coverages for KMT2A exons 3 and 27, fold coverage difference
@@ -43,9 +43,9 @@ def generate_PTD_KMT2A_df(args):
     all_data = []
     for index, file in enumerate(args.comparison_csv):
         df = pd.read_csv(file.name, delimiter=',')
-
+        #append rows
         all_data.append(df)
-    #print(all_data)
+    #merge rows into single data frame
     merged_data = pd.concat(all_data)
     print(merged_data)
 
