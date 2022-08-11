@@ -54,7 +54,7 @@ sample_id,MLL_EXON3,MLL_EXON27,fold_change,log2_fold_change,above_cut_off
 
 """
 
-##generate_comparison_csv_to_xls.py
+generate_comparison_csv_to_xls.py
 generate_comparison_csv_to_xls.py takes outputs from tandemhunter to
 make a single .xlsx spreadsheet named comparison_csv.xlsx
 
