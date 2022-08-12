@@ -122,7 +122,7 @@ class TDHunter(object):
         at two given intervals.
         :param: file: Path to coverage file
         :param: batch: Path to folder with a batch of coverage files
-        :param: intervals: Path to file containing intervals to compare coverage at
+        :param: intervals: Path to file with intervals to compare coverage at
         :param: dup_threshold: Threshold used to identify dup/amp regions
         :param: out_dir: Output write directory
         :param: out_fname_suffix: Filename suffix for naming results file
@@ -213,7 +213,7 @@ class TDHunter(object):
             coverage_files = []
             for root, dirnames, filenames in os.walk(batch_dir):
                 for filename in fnmatch.filter(
-                    filenames, "*{0}".format(cov_file_pattern)):
+                        filenames, "*{0}".format(cov_file_pattern)):
                     coverage_files.append(os.path.join(root, filename))
         except Exception as e:
             coverage_files = []
