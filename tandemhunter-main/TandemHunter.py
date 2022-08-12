@@ -1,4 +1,5 @@
-# Tandem Hunter: Identification of duplicated/amplified regions based on the comparison
+# Tandem Hunter: Identification of duplicated/amplified
+# regions based on the comparison
 # of normalise coverage between two intervals in given coverage file
 # (PER_TARGET_COVERAGE from Picard CollectHsMetrics).
 
@@ -46,7 +47,7 @@ def tdh_argument_parser(args):
     parser = argparse.ArgumentParser(
         description=(
             "Tandem Hunter: Identification of duplicated/amplified regions"
-            "based on the comparison of normalise coverage between two intervals"
+            "based on comparing normalised coverage between two intervals"
         )
     )
     required = parser.add_argument_group("required named arguments")
@@ -57,7 +58,7 @@ def tdh_argument_parser(args):
         "-B",
         "--batch",
         default=False,
-        help="Path to folder containing a batch of coverage files. DO NOT use -F and -B together.",
+        help="Path to coverage files folder. DON'T use -F and -B together.",
     )
     required.add_argument(
         "--intervals",
@@ -73,7 +74,7 @@ def tdh_argument_parser(args):
         "--dup-threshold",
         type=float,
         default=1.122995,
-        help="Default threshold used to identify dup/amp regions if not given in interval file",
+        help="Default threshold for dup/amp regions if not in interval file",
     )
     parser.add_argument(
         "-O", "--out_dir", default=".", help="Output write directory"
@@ -84,19 +85,21 @@ def tdh_argument_parser(args):
         help="Filename suffix to use when naming results file",
     )
     parser.add_argument(
-        "--processes", default=0, help="Number of processes to run in parallel",
+        "--processes", default=0,
+        help="Number of processes to run in parallel",
     )
     parser.add_argument(
         "--cov-file-pattern",
         default="coverage.tsv",
-        help="Filename suffix used to identify coverage files when in batch mode",
+        help="Filename suffix used to identify coverage files in batch mode",
     )
     parser.add_argument(
         "--metric",
         default="normalized_coverage",
         help="Metric to used in comparison",
     )
-    parser.add_argument("--version", action="version", version="%(prog)s 1.0.0")
+    parser.add_argument("--version",
+                        action="version", version="%(prog)s 1.0.0")
 
     return parser.parse_args(args)
 
@@ -118,16 +121,16 @@ class TDHunter(object):
         """ Object containg methods that compare normalised coverage
         at two given intervals.
         :param: file: Path to coverage file
-        :param: batch: Path to folder containing a batch of coverage files
+        :param: batch: Path to folder with a batch of coverage files
         :param: intervals: Path to file containing intervals to compare coverage at
         :param: dup_threshold: Threshold used to identify dup/amp regions
         :param: out_dir: Output write directory
-        :param: out_fname_suffix: Filename suffix to use when naming results file
+        :param: out_fname_suffix: Filename suffix for naming results file
         :param: processes: Maximum number of processes to run (default is cpu
                             count)
-        :param: cov_file_pattern: Filename suffix used to identify coverage files
+        :param: cov_file_pattern: Filename suffix to identify coverage files
                                     when in batch mode
-        :param: column_dtypes: Dictionary containing column name and datatype for
+        :param: column_dtypes: Dictionary with column name and datatype for
                             the given coverage file type
         :param: metric: Metric to used in comparison
         :returns: Writes a coverage comparison between two intervals to a text
@@ -181,7 +184,7 @@ class TDHunter(object):
         # print error if neither file or batch given
         else:
             sys.stderr.write(
-                "[{0}] Error: File or batch folder has not been specified!".format(
+                "[{0}] Error: File or batch folder not specified!".format(
                     datetime.now()
                 )
             )
@@ -191,7 +194,7 @@ class TDHunter(object):
     def _find_coverage_files(cls, batch_dir, cov_file_pattern):
         """ Method to find coverage files in a directory.
         :param: batch_dir: Path to batch directory
-        :param: cov_file_pattern: Filename suffix used to identify coverage files
+        :param: cov_file_pattern: Filename suffix to identify coverage files
         :returns: A list of coverage files found in given directory
         """
         print(
@@ -209,7 +212,8 @@ class TDHunter(object):
         except TypeError:
             coverage_files = []
             for root, dirnames, filenames in os.walk(batch_dir):
-                for filename in fnmatch.filter(filenames, "*{0}".format(cov_file_pattern)):
+                for filename in fnmatch.filter(
+                    filenames, "*{0}".format(cov_file_pattern)):
                     coverage_files.append(os.path.join(root, filename))
         except Exception as e:
             coverage_files = []
@@ -219,7 +223,7 @@ class TDHunter(object):
     def _import_coverage(cls, file, column_dtypes, sep="\t"):
         """ Method to read output file from coverage file into a dataframe.
         :param: file: Path to coverage file
-        :param: column_dtypes: Dictionary containing column name and datatype for
+        :param: column_dtypes: Dictionary with column name and datatype for
                             the given coverage file type
         :param: sep: seperate used in coverage file (default is tab)
         :returns: reader iterable containing Pandas dataframe.
@@ -395,7 +399,8 @@ class TDHunter(object):
         except Exception as e:
             sys.stderr.write(str(e))
             sys.stderr.write(
-                "[{0}] Error: {1} interval file is not in the correct format! Exiting...!".format(
+                "[{0}] Error: {1} interval file wrong format! Exiting...!"
+                .format(
                     datetime.now(), os.path.basename(intervals)
                 )
             )
@@ -432,7 +437,7 @@ class TDHunter(object):
         except Exception as e:
             sys.stderr.write("[{0}] Error: {1}".format(datetime.now(), str(e)))
             sys.stderr.write(
-                "[{0}] Error: {1} coverage file is invalid (malformed or missing intervals of interest)".format(
+                "[{0}] Error: {1} tsv malformed/missing intervals".format(
                     datetime.now(), os.path.basename(file)
                 )
             )
