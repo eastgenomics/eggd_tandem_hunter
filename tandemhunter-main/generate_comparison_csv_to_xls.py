@@ -73,14 +73,14 @@ def KM2TA_df_to_xls(PTD_KM2TA_1):
    # print(PTD_KM2TA_1.dtypes)
    # convert boolean to string to keep true/false
     PTD_KM2TA_1['above_cut_off'] = PTD_KM2TA_1['above_cut_off'].astype('str')
-    PTD_KM2TA_1.to_excel("comparison_csv.xlsx", index = False, header = True)
+    PTD_KM2TA_1.to_excel("comparison_csv.xlsx", index=False, header=True)
 
 
 def main():
     args = parse_args()
     PTD_KM2TA_1 = generate_PTD_KMT2A_df(args)
 
-   #write output bed file
+   # write output bed file
     KM2TA_df_to_xls(PTD_KM2TA_1)
 
 
