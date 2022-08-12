@@ -20,14 +20,12 @@ chrom	start	end	length	name	%gc	mean_coverage	normalized_coverage	min_normalized
 chr11	118436493	118436944	452	.	0.792035	2120.834071	0.750534	0.4735	0.952308	1338	2691	0	10154
 chr11	118468776	118468844	69	.	0.463768	5666.768116	2.005392	1.758461	2.115179	4969	5977	0	8063
 chr11	118471663	118474315	2653	.	0.455711	7069.555974	2.501819	1.547899	2.771638	4374	7832	0	164434
-
 ```
+
 The East GLH somatic pipeline use `eggd Picard QC v1.0.0` to generate these per
 target coverage files. NOTE: The exact coordinates for exons 3 and 27 need to be in the
 PER_TARGET_COVERAGE output file, this can be done by running Picard using
 egg_tandem_hunter/Picard_inputs/KMT2A_all_exons.bed
-
-```
 
 It can be run with a single file (with `-F` or `--file` switch) or a batch of
 coverage files (`-B` or `--batch` switch) as shown below. One of these has to be
@@ -39,6 +37,7 @@ python TandemHunter.py -B test/Batch -O /path/to/output_dir
 
 # Pass in a single coverage file and write to specified directory
 python TandemHunter.py -F test/PositiveSample.qc.coverage.txt -O /path/to/output_dir
+
 ```
 
 A full list of additional arguments can be viewed by `python TandemHunter.py --help`.
@@ -64,5 +63,4 @@ sample_id	MLL_EXON3	MLL_EXON27	fold_change	log2_fold_change	above_cut_off
 2109981_21315Z0106_1_BM_MPD_MYE_M_EGG2_S8_L001_markdup.pertarget_	1.469901	1.470338	0.999702789	-0.000428849	False
 2202920_22084Z0046_1_BM_AML_MYE_M_EGG2_S2_L001_markdup.pertarget_	1.452241	1.476602	0.983501986	-0.024000129	False
 2204519_22131Z0009_1_BM_MPD_MYE_M_EGG2_S9_L001_markdup.pertarget_	1.444375	1.471847	0.981335016	-0.027182356	False
-
 ```
