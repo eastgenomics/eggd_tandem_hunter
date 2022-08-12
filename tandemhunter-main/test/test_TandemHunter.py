@@ -53,7 +53,8 @@ class TestTDHunterAll(BaseTest):
         contains positive results """
         file = "./test/PositiveSample.qc.coverage.txt"
         # initiate class
-        td = TDHunter(file=file, intervals=self.intervals, out_dir=self.out_dir)
+        td = TDHunter(file=file,
+                      intervals=self.intervals, out_dir=self.out_dir)
         assert td
 
         # check and contents
@@ -84,7 +85,8 @@ class TestTDHunterAll(BaseTest):
         contains negative results """
         file = "./test/NegativeSample.qc.coverage.txt"
         # initiate class
-        td = TDHunter(file=file, intervals=self.intervals, out_dir=self.out_dir)
+        td = TDHunter(file=file,
+                      intervals=self.intervals, out_dir=self.out_dir)
         assert td
 
         # check and contents
@@ -111,7 +113,7 @@ class TestTDHunterAll(BaseTest):
         )
 
     def test_with_interval_json_no_dup_threshold(self):
-        """ No error if interval json file does not have dup_threshold defined. """
+        """ No error if interval json file has no dup_threshold defined. """
         file = "./test/PositiveSample.qc.coverage.txt"
         intervals = "./test/test_intervals_no_dup_threshold.json"
         # initiate class
@@ -144,7 +146,8 @@ class TestTDHunterAll(BaseTest):
     def test_initiation_with_batch(self):
         """ No error if batch argument given """
         td = TDHunter(
-            batch="./test/Batch", out_dir=self.out_dir, intervals=self.intervals
+            batch="./test/Batch",
+            out_dir=self.out_dir, intervals=self.intervals
         )
         assert td
         # check 2 results file created
@@ -165,7 +168,8 @@ class TestTDHunterAll(BaseTest):
         :returns: Asserts file doesn't exists and stderr message
         """
         # initiate class
-        td = TDHunter(file=file, intervals=self.intervals, out_dir=self.out_dir)
+        td = TDHunter(file=file, intervals=self.intervals,
+                      out_dir=self.out_dir)
         assert td
         # checkout std err message in output
         captured = capsys.readouterr()
@@ -207,6 +211,7 @@ class TestTDHunterAll(BaseTest):
         intervals = "./test/test_intervals_malformed.json"
         with pytest.raises(SystemExit):
             TDHunter(file=file, intervals=intervals)
+
 
 class TestFindCoverageFiles(BaseTest):
     def test_coverage_file_present(self):
