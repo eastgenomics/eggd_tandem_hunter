@@ -20,8 +20,8 @@ def parse_args():
     parser = argparse.ArgumentParser()
 
     parser.add_argument(
-        '--comparison_csv', type=argparse.FileType('r'), nargs="+"
-        , required=True,
+        '--comparison_csv', type=argparse.FileType('r'), nargs="+",
+        required=True,
         help='all cvg_comparison.csv files for tandemhunter output'
     )
     parser.add_argument(
@@ -70,8 +70,8 @@ def KM2TA_df_to_xls(PTD_KM2TA_1):
    TRUE/FALSE statement to suggest if sample likely has PTDs
    """
 
-   # print(PTD_KM2TA_1.dtypes)
-   # convert boolean to string to keep true/false
+    # print(PTD_KM2TA_1.dtypes)
+    # convert boolean to string to keep true/false
     PTD_KM2TA_1['above_cut_off'] = PTD_KM2TA_1['above_cut_off'].astype('str')
     PTD_KM2TA_1.to_excel("comparison_csv.xlsx", index=False, header=True)
 
@@ -80,7 +80,7 @@ def main():
     args = parse_args()
     PTD_KM2TA_1 = generate_PTD_KMT2A_df(args)
 
-   # write output bed file
+    # write output bed file
     KM2TA_df_to_xls(PTD_KM2TA_1)
 
 
