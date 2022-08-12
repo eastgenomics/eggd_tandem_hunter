@@ -48,11 +48,11 @@ Coverage comparisons are written to a file called `.cvg_comparison.csv` in the p
 
 An example of the contents of a `.cvg_comparison.csv` file is given below.
 
-"""
+```
 sample_id,MLL_EXON3,MLL_EXON27,fold_change,log2_fold_change,above_cut_off
 2204845_22144Z0041_1_BM_MPD_MYE_M_EGG2_S39_L001_markdup.pertarget_,2.501819,0.9739260000000001,2.568797835,1.361093354,TRUE
 
-"""
+```
 
 generate_comparison_csv_to_xls.py
 generate_comparison_csv_to_xls.py takes outputs from tandemhunter to
@@ -60,10 +60,10 @@ make a single .xlsx spreadsheet named comparison_csv.xlsx
 
 An example of it's contents comparison_csv.xlsx is given below.
 
-"""
+```
 sample_id	MLL_EXON3	MLL_EXON27	fold_change	log2_fold_change	above_cut_off
 2109981_21315Z0106_1_BM_MPD_MYE_M_EGG2_S8_L001_markdup.pertarget_	1.469901	1.470338	0.999702789	-0.000428849	False
 2202920_22084Z0046_1_BM_AML_MYE_M_EGG2_S2_L001_markdup.pertarget_	1.452241	1.476602	0.983501986	-0.024000129	False
 2204519_22131Z0009_1_BM_MPD_MYE_M_EGG2_S9_L001_markdup.pertarget_	1.444375	1.471847	0.981335016	-0.027182356	False
 
-"""
+```
