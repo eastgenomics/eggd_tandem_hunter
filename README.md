@@ -28,8 +28,7 @@ chr11	118468776	118468844	69	.	0.463768	5666.768116	2.005392	1.758461	2.115179	4
 chr11	118471663	118474315	2653	.	0.455711	7069.555974	2.501819	1.547899	2.771638	4374	7832	0	164434
 ```
 
-The East GLH somatic pipeline use `eggd Picard QC v1.0.0` to generate these per
-target coverage files. NOTE: The exact coordinates for exons 3 and 27 need to be in the
+NOTE: The exact coordinates for exons 3 and 27 need to be in the
 PER_TARGET_COVERAGE output file, this can be done by running Picard using
 egg_tandem_hunter/Picard_inputs/KMT2A_all_exons.bed
 
