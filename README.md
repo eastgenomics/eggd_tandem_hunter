@@ -14,7 +14,7 @@ A requirements file for based on python 3.6 is available in the `requirements.tx
 TandemHunter.py assesses duplicated/amplified regions based on the comparison of
 normalise coverage between two intervals in given coverage file.
 
-It can be used to identify KMT2A/MLL partial tandem duplications and is based on
+It can be used to identify partial tandem duplications and is based on
 the method described by McKerrell et al., 2016, where they compare
 the coverage of exon 3 and exon 27 of MLL/KMT2A.
 
