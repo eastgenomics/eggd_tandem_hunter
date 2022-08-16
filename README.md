@@ -1,6 +1,13 @@
 # egg_tandem_hunter v1.0.0
 This app has been adapted in house to work for samples aligned to b38 reference.
 
+## Requirements
+-   Python 2.7+/3.4+ (originally tested on python 2.7 and python 3.6)
+-   pandas
+-   numpy
+
+A requirements file for based on python 3.6 is available in the `requirements.txt` file.
+
 ## Identification of duplicated/amplified regions based on the comparison of normalise coverage between two intervals in given coverage file.
 
 ## Usage
