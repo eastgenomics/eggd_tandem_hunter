@@ -70,5 +70,17 @@ sample_id	MLL_EXON3	MLL_EXON27	fold_change	log2_fold_change	above_cut_off
 2202920_22084Z0046_1_BM_AML_MYE_M_EGG2_S2_L001_markdup.pertarget_	1.452241	1.476602	0.983501986	-0.024000129	False
 2204519_22131Z0009_1_BM_MPD_MYE_M_EGG2_S9_L001_markdup.pertarget_	1.444375	1.471847	0.981335016	-0.027182356	False
 ```
+## Testing
+The following non-base module(s) are required for running the unit tests. These
+are defined in the `requirements.txt` file.
+-   pytest
+-   pytest-cov
+
+To run the unit tests and assess code coverage, run the following command.
+
+```bash
+# run this line in the base directory for the module
+pytest --cov=TandemHunter --cov-report term-missing -v test
+```
 
 Originally developed by NEY GLH Bioinformatics Team.
