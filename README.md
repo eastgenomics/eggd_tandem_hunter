@@ -15,7 +15,7 @@ TandemHunter.py assesses duplicated/amplified regions based on the comparison of
 normalise coverage between two intervals in given coverage file. Intervals are given in
 .json format (tandemhunter-main/intervals_b38.json)
 
-It can be used to identify partial tandem duplications and is based on
+intervals_b38.json can be used to identify partial tandem duplications and is based on
 the method described by McKerrell et al., 2016, where they compare
 the normalised coverage of exon 3 and exon 27 of MLL/KMT2A.
 
