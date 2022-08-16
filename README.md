@@ -33,9 +33,8 @@ PER_TARGET_COVERAGE output file, this can be done by running Picard using
 egg_tandem_hunter/Picard_inputs/KMT2A_all_exons.bed. This file has the exonic
 coordinates for KMT2A and used to retrieve coverage information for each exon.
 
-It can be run with a single file (with `-F` or `--file` switch) or a batch of
-coverage files (`-B` or `--batch` switch) as shown below. One of these has to be
-given, but not both.
+TandemHunter can be run with a single PER_TARGET_COVERAGE file (with `-F` or `--file` switch) or a batch of
+coverage files (`-B` or `--batch` switch) as shown below. One of these arguments has to be given, but not both.
 
 ```
 # Pass in a batch directory and write to specified directory
@@ -48,7 +47,7 @@ python TandemHunter.py -F test/PositiveSample.qc.coverage.txt -O /path/to/output
 
 A full list of additional arguments can be viewed by `python TandemHunter.py --help`.
 
-Coverage comparisons are written to a file called `.cvg_comparison.csv` in the present working directory by default.
+Coverage comparisons per input file are written to a file called `.cvg_comparison.csv` in the present working directory by default.
 
 An example of the contents of a `.cvg_comparison.csv` file is given below.
 
