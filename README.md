@@ -30,7 +30,8 @@ chr11	118471663	118474315	2653	.	0.455711	7069.555974	2.501819	1.547899	2.771638
 
 NOTE: The exact coordinates for exons 3 and 27 need to be in the
 PER_TARGET_COVERAGE output file, this can be done by running Picard using
-egg_tandem_hunter/Picard_inputs/KMT2A_all_exons.bed
+egg_tandem_hunter/Picard_inputs/KMT2A_all_exons.bed. This file has the exonic
+coordinates for KMT2A and used to retrieve coverage information for each exon.
 
 It can be run with a single file (with `-F` or `--file` switch) or a batch of
 coverage files (`-B` or `--batch` switch) as shown below. One of these has to be
