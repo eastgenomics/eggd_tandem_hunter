@@ -1,5 +1,4 @@
 # egg_tandem_hunter v1.0.0
-Originally developed by NEY GLH Bioinformatics Team.
 This app has been adapted in house to work for samples aligned to b38 reference.
 
 ## Identification of duplicated/amplified regions based on the comparison of normalise coverage between two intervals in given coverage file.
@@ -64,3 +63,5 @@ sample_id	MLL_EXON3	MLL_EXON27	fold_change	log2_fold_change	above_cut_off
 2202920_22084Z0046_1_BM_AML_MYE_M_EGG2_S2_L001_markdup.pertarget_	1.452241	1.476602	0.983501986	-0.024000129	False
 2204519_22131Z0009_1_BM_MPD_MYE_M_EGG2_S9_L001_markdup.pertarget_	1.444375	1.471847	0.981335016	-0.027182356	False
 ```
+
+Originally developed by NEY GLH Bioinformatics Team.
