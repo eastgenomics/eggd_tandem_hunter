@@ -9,6 +9,7 @@ This app has been adapted in house to work for samples aligned to b38 reference.
 A requirements file for based on python 3.6 is available in the `requirements.txt` file.
 
 ## Purpose
+Identification of duplicated/amplified regions based on the comparison of normalise coverage between two intervals in given coverage file.
 
 ## Usage
 TandemHunter.py assesses duplicated/amplified regions based on the comparison of
