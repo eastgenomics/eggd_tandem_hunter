@@ -1,4 +1,4 @@
-setwd("~/new_projects/tandemhunter_coverage")
+#setwd("~/new_projects/tandemhunter_coverage")
 
 #import csv to make exons BED for KMT2A
 KMT2A_coord <- read_csv("ExonsSpreadsheet-Homo_sapiens_Transcript_Exons_ENST00000534358.csv")
