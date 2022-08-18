@@ -4,6 +4,7 @@
 # (PER_TARGET_COVERAGE from Picard CollectHsMetrics).
 
 # Author: Helena L. Spiewak
+# Contributors: Nadia Mohammed
 # Date created: 2021-04-06
 # Date modified: 2021-04-06
 
