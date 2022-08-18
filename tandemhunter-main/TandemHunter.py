@@ -77,7 +77,8 @@ def tdh_argument_parser(args):
         help="Default threshold for dup/amp regions if not in interval file",
     )
     parser.add_argument(
-        "-O", "--out_dir", default=".", help="Output write directory"
+        "-O", "--out_dir",
+        default=".", help="Output write directory"
     )
     parser.add_argument(
         "--out-fname-suffix",
@@ -99,7 +100,8 @@ def tdh_argument_parser(args):
         help="Metric to used in comparison",
     )
     parser.add_argument("--version",
-                        action="version", version="%(prog)s 1.0.0")
+        action="version", 
+        version="%(prog)s 1.0.0")
 
     return parser.parse_args(args)
 
