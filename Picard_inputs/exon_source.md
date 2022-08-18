@@ -1,1 +1,1 @@
-Exon coordiantes for the KMT2A gene in GRCh38 were taken from https://www.ensembl.org/Homo_sapiens/Transcript/Exons?db=core;g=ENSG00000118058;r=11:118436456-118526832;t=ENST00000534358.
+Exon coordinates for the KMT2A gene in GRCh38 were taken from https://www.ensembl.org/Homo_sapiens/Transcript/Exons?db=core;g=ENSG00000118058;r=11:118436456-118526832;t=ENST00000534358.
