@@ -7,6 +7,7 @@
 # Contributors: Nadia Mohammed
 # Date created: 2021-04-06
 # Date modified: 2021-04-06
+# Date modified for v2.0.0: 2022-08-18
 
 # It is used to identify KMT2A/MLL partial tandem duplications and is based on
 # the method described by McKerrell et al., 2016, where they compare
