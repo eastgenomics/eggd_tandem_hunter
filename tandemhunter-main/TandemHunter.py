@@ -102,7 +102,7 @@ def tdh_argument_parser(args):
         help="Metric to used in comparison",
     )
     parser.add_argument("--version",
-        action="version", 
+        action="version",
         version="%(prog)s 2.0.0")
 
     return parser.parse_args(args)
