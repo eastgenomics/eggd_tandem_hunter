@@ -52,7 +52,7 @@ def tdh_argument_parser(args):
             "based on comparing normalised coverage between two intervals"
         )
     )
-    required = parser.add_argument_group("required named arguments")
+    required = parser.add_mutually_exclusive_group(required=True)
     required.add_argument(
         "-F", "--file", default=False, help="Path to coverage file OR"
     )
@@ -62,7 +62,7 @@ def tdh_argument_parser(args):
         default=False,
         help="Path to coverage files folder. DON'T use -F and -B together.",
     )
-    required.add_argument(
+    parser.add_argument(
         "--intervals",
         type=str,
         required=True,
