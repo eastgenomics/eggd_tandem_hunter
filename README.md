@@ -48,7 +48,7 @@ python TandemHunter.py -F test/PositiveSample.qc.coverage.txt -O /path/to/output
 
 A full list of additional arguments can be viewed by `python TandemHunter.py --help`.
 
-Coverage comparisons per input file are written to a file called `.cvg_comparison.csv` in the present working directory by default.
+Coverage comparisons are written to a files called `.cvg_comparison.csv` for each input file in the present working directory by default.
 
 An example of the contents of a `.cvg_comparison.csv` file is given below.
 
