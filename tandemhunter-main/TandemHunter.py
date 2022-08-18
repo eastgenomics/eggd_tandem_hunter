@@ -107,20 +107,7 @@ def tdh_argument_parser(args):
 
 
 class TDHunter(object):
-    def __init__(
-        self,
-        file=False,
-        batch=False,
-        intervals=False,
-        dup_threshold=1.122995,
-        out_dir=".",
-        out_fname_suffix=".cvg_comparison.csv",
-        processes=0,
-        cov_file_pattern=".qc.coverage.txt",
-        column_dtypes=COV_COLUMN_DTYPES,
-        metric="normalized_coverage",
-    ):
-        """ Object containg methods that compare normalised coverage
+    """ Object containg methods that compare normalised coverage
         at two given intervals.
         :param: file: Path to coverage file
         :param: batch: Path to folder with a batch of coverage files
@@ -137,7 +124,20 @@ class TDHunter(object):
         :param: metric: Metric to used in comparison
         :returns: Writes a coverage comparison between two intervals to a text
                     file on per-sample basis
-        """
+    """
+    def __init__(
+        self,
+        file=False,
+        batch=False,
+        intervals=False,
+        dup_threshold=1.122995,
+        out_dir=".",
+        out_fname_suffix=".cvg_comparison.csv",
+        processes=0,
+        cov_file_pattern=".qc.coverage.txt",
+        column_dtypes=COV_COLUMN_DTYPES,
+        metric="normalized_coverage",
+    ):
 
         # store arguments
         try:
