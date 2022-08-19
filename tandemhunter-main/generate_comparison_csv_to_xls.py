@@ -74,8 +74,8 @@ def KM2TA_df_to_xls(PTD_KM2TA_1, args):
     # convert boolean to string to keep true/false
     PTD_KM2TA_1['above_cut_off'] = PTD_KM2TA_1['above_cut_off'].astype('str')
     #write to excel
-    if (args.run) is not None:
-        PTD_KM2TA_1.to_excel("{args.run}""_comparison_csv.xlsx",
+    if (args.run):
+        PTD_KM2TA_1.to_excel((args.run) + "_comparison_csv.xlsx",
         index=False, header=True)
     else:
         PTD_KM2TA_1.to_excel("comparison_csv.xlsx", index=False, header=True)
