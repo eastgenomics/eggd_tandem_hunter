@@ -1,0 +1,108 @@
+{
+  "name": "egg_TandemHunter",
+  "summary": "Uses per target coverage files from Picard to calculate fold changes in specific exons for the detection of presumptive PTDs",
+  "properties": {
+    "github release": "v2.0.0"
+  },
+    "version": "2.0.0",
+  "authorizedUsers": [
+    "org-emee_1"
+  ],
+    "developers":[
+    "org-emee_1"
+  ],
+   "dxapi": "1.0.0",
+  "inputSpec": [
+    {
+      "name": "file",
+      "label": "Query coverage_file/s",
+      "help": "Per target coverage file containing exon coordinates and normalised coverage values (pertarget_coverage.tsv)",
+      "optional": true,
+      "class": "file",
+      "patterns": ["*.pertarget_coverage.tsv"]
+    },
+    {
+      "name": "intervals",
+      "label": "JSON file",
+      "help": "JSON file containing containing intervals to compare coverage at (.json)",
+      "optional": false,
+      "class": "file",
+      "patterns": ["*.json"]
+    },
+    {
+      "name": "OUT_DIR",
+      "label": "Output prefix",
+      "class": "string",
+      "optional": true
+    },
+        {
+      "name": "out-fname",
+      "label": "Output file name suffix",
+      "class": "string",
+      "optional": true
+    },
+        {
+      "name": "processes",
+      "label": "process number",
+      "help": "Number of processes to run in parallel",
+      "class": "string",
+      "optional": true
+    },
+        {
+      "name": "cov-file-pattern",
+      "label": "Filename suffix batch mode",
+      "help": "Filename suffix used to identify coverage files in batch mode",
+      "class": "string",
+      "optional": true
+    },
+        {
+      "name": "metric",
+      "label": "Metric for comparison",
+      "help": "Metric to use in comparing files",
+      "class": "string",
+      "optional": true
+    },
+        {
+      "name": "version",
+      "label": "version",
+      "help": "show program's version number and exit",
+      "class": "string",
+      "optional": true
+    }
+],
+ "outputSpec": [
+    {
+      "name": "comparison_csv",
+      "label": "csv files with TandemHunter outputs per sample (.cvg_comparison.csv)",
+      "class": "file"
+    },
+        {
+      "name": "comparison_csv.xlsx",
+      "label": "output single .xlsx file with TandemHunter output (.cvg_comparison.csv)",
+      "class": "file"
+    }
+],
+ "runSpec": {
+    "systemRequirements": {
+      "*": {
+        "instanceType": "mem1_ssd1_x2"
+      }
+    },
+    "timeoutPolicy": {
+      "*": {
+        "hours": 2
+      }
+    },
+    "file": "src/code.sh",
+    "release": "20.04",
+    "version": "0",
+    "interpreter": "bash",
+    "distribution": "Ubuntu"
+  },
+  "access": {
+    "allProjects": "VIEW",
+    "network": [
+      "*"
+    ]
+  }
+}
