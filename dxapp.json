@@ -90,7 +90,7 @@
     },
     "timeoutPolicy": {
       "*": {
-        "hours": 2
+        "minutes": 30
       }
     },
     "file": "src/code.sh",
