@@ -14,7 +14,7 @@
    "dxapi": "1.0.0",
   "inputSpec": [
     {
-      "name": "file",
+      "name": "coverage_file",
       "label": "Query coverage_file/s",
       "help": "Per target coverage file containing exon coordinates and normalised coverage values (pertarget_coverage.tsv)",
       "optional": false,
