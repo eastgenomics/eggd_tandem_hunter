@@ -43,6 +43,13 @@
       "optional": false,
       "class": "file",
       "patterns": ["*.json"]
+    },
+    {
+      "name": "run",
+      "label": "run name",
+      "help": "run name to prefix output .xlsx file",
+      "class": "string",
+      "optional": true
     }
 ],
  "outputSpec": [
