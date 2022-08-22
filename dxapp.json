@@ -30,42 +30,9 @@
       "patterns": ["*.json"]
     },
     {
-      "name": "OUT_DIR",
-      "label": "Output prefix",
-      "class": "string",
-      "optional": true
-    },
-        {
-      "name": "out-fname",
-      "label": "Output file name suffix",
-      "class": "string",
-      "optional": true
-    },
-        {
-      "name": "processes",
-      "label": "process number",
-      "help": "Number of processes to run in parallel",
-      "class": "string",
-      "optional": true
-    },
-        {
-      "name": "cov-file-pattern",
-      "label": "Filename suffix batch mode",
-      "help": "Filename suffix used to identify coverage files in batch mode",
-      "class": "string",
-      "optional": true
-    },
-        {
-      "name": "metric",
-      "label": "Metric for comparison",
-      "help": "Metric to use in comparing files",
-      "class": "string",
-      "optional": true
-    },
-        {
-      "name": "version",
-      "label": "version",
-      "help": "show program's version number and exit",
+      "name": "advanced_options",
+      "label": "Advanced command line options",
+      "help": "Advanced command line options that will be supplied directly to TandemHunter execution.",
       "class": "string",
       "optional": true
     }
