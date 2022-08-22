@@ -35,6 +35,14 @@
       "help": "Advanced command line options that will be supplied directly to TandemHunter execution.",
       "class": "string",
       "optional": true
+    },
+    {
+      "name": "comparison_csv",
+      "label": "csv file",
+      "help": "CSV files used to make single .xlsx with Tandemhunter outputs (.xlsx)",
+      "optional": false,
+      "class": "file",
+      "patterns": ["*.json"]
     }
 ],
  "outputSpec": [
