@@ -16,23 +16,13 @@ mkdir /home/dnanexus/out/summary_xlsx
 # Download inputs from DNAnexus
 dx-download-all-inputs
 
-# handle when NO query coverage files provided
-if [ -z "$coverage_targets_tsv" ]; then
-	touch /home/dnanexus/out/summary_csv/noQuerycoveragefileFound.summary_csv
-else
-    # Download inputs from DNAnexus
-    dx-download-all-inputs
-
 # run script for PTD prediction outputs
-python TandemHunter.py $advanced_options "$output_name" "${coverage_targets_tsv[@]}"
+python TandemHunter.py $advanced_options -o /home/dnanexus/out/summary_csvs -B /home/dnanexus/in/coverage_files
 
 # Run second script (if number of files greater than 1)
 # collate data into single dataframe
-if f in ["$coverage_targets_file"]!= 0; then
-    python TandemHunter.py $advanced_options $run "$output_name" "${comparison_csv[@]}"
-else
-    mv ~/"${comparison_csv_prefix}.pertarget_coverage.tsv" ~/out/summary_csvs/
-    dx-upload-all-outputs --parallel
+#if f in ["$coverage_targets_file"]>1 ; then
+python generate_comparison_csv_to_xls.py /home/dnanexus/out/summary_csvs $run
 
 # Upload outputs (from /home/dnanexus/out) to DNAnexus
 dx-upload-all-outputs --parallel
