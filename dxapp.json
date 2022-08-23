@@ -14,11 +14,11 @@
    "dxapi": "1.0.0",
   "inputSpec": [
     {
-      "name": "coverage_file",
+      "name": "coverage_files",
       "label": "Query coverage_file/s",
       "help": "Per target coverage file containing exon coordinates and normalised coverage values (pertarget_coverage.tsv)",
       "optional": false,
-      "class": "file",
+      "class": "array:file",
       "patterns": ["*.pertarget_coverage.tsv"]
     },
     {
@@ -37,14 +37,6 @@
       "optional": true
     },
     {
-      "name": "comparison_csv",
-      "label": "csv file",
-      "help": "CSV files used to make single .xlsx with Tandemhunter outputs (.xlsx)",
-      "optional": false,
-      "class": "file",
-      "patterns": ["*.json"]
-    },
-    {
       "name": "run",
       "label": "run name",
       "help": "run name to prefix output .xlsx file",
@@ -56,7 +48,7 @@
     {
       "name": "comparison_csv",
       "label": "csv files with TandemHunter outputs per sample (.cvg_comparison.csv)",
-      "class": "file"
+      "class": "array:file"
     },
         {
       "name": "comparison_csv.xlsx",
