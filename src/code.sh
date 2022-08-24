@@ -17,12 +17,12 @@ mkdir /home/dnanexus/out/summary_xlsx
 dx-download-all-inputs
 
 # run script for PTD prediction outputs
-python TandemHunter.py -B /home/dnanexus/in/coverage_files --intervals /home/dnanexus/in/intervals -O /home/dnanexus/out/summary_csvs $advanced_options
+python3 TandemHunter.py -B /home/dnanexus/in/coverage_files --intervals /home/dnanexus/in/intervals -O /home/dnanexus/out/summary_csvs $advanced_options
 
 # Run second script (if number of files greater than 1)
 # collate data into single dataframe
 #if f in ["$coverage_targets_file"]>1 ; then
-python generate_comparison_csv_to_xls.py --comparison_csv /home/dnanexus/out/summary_csvs $run
+python3 generate_comparison_csv_to_xls.py --comparison_csv /home/dnanexus/out/summary_csvs $run
 
 # Upload outputs (from /home/dnanexus/out) to DNAnexus
 dx-upload-all-outputs --parallel
