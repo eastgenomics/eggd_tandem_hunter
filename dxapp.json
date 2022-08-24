@@ -1,5 +1,5 @@
 {
-  "name": "egg_TandemHunter",
+  "name": "egg_tandem_hunter",
   "summary": "Uses per target coverage files from Picard to calculate fold changes in specific exons for the detection of presumptive PTDs",
   "properties": {
     "github release": "v2.0.0"
