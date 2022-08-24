@@ -17,7 +17,7 @@ mkdir /home/dnanexus/out/summary_xlsx
 dx-download-all-inputs
 
 # run script for PTD prediction outputs
-python3 /home/dnanexus/TandemHunter.py -B /home/dnanexus/in/coverage_files --intervals /home/dnanexus/in/intervals -O /home/dnanexus/out/summary_csvs $advanced_options
+python3 TandemHunter.py -B /home/dnanexus/in/coverage_files --intervals /home/dnanexus/in/intervals -O /home/dnanexus/out/summary_csvs $advanced_options
 
 # Run second script (if number of files greater than 1)
 # collate data into single dataframe
