@@ -59,12 +59,12 @@
  "runSpec": {
     "systemRequirements": {
       "*": {
-        "instanceType": "mem1_ssd1_x2"
+        "instanceType": "mem1_ssd1_v2_x2"
       }
     },
     "timeoutPolicy": {
       "*": {
-        "minutes": 30
+        "minutes": 55
       }
     },
     "file": "src/code.sh",
