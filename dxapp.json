@@ -51,7 +51,7 @@
       "class": "array:file"
     },
         {
-      "name": "comparison_csv.xlsx",
+      "name": "comparison_xlsx",
       "label": "output single .xlsx file with TandemHunter output (.cvg_comparison.csv)",
       "class": "file"
     }
