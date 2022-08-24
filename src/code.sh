@@ -25,7 +25,7 @@ python3 TandemHunter.py -F /home/dnanexus/in/coverage_files --intervals /home/dn
 # Run second script (if number of files greater than 1)
 # collate data into single dataframe
 #if f in ["$coverage_targets_file"]>1 ; then
-python3 generate_comparison_csv_to_xls.py --comparison_csv /home/dnanexus/out/summary_csvs $run
+python3 generate_comparison_csv_to_xls.py --comparison_csv /home/dnanexus/out/summary_csvs/*.csv $run
 
 # Upload outputs (from /home/dnanexus/out) to DNAnexus
 dx-upload-all-outputs --parallel
