@@ -8,6 +8,9 @@
 # -e = exit on error; -x = output each line that is executed to log; -o pipefail = throw an error if there's an error in pipeline
 set -e -x -o pipefail
 
+# Install packages from the python asset
+pip3 install /pytz-*.whl /numpy-*.whl /pandas-*.whl
+
 # Make directories to hold outputs
 mkdir /home/dnanexus/out
 mkdir /home/dnanexus/out/summary_csvs
