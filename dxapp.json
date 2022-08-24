@@ -71,7 +71,15 @@
     "release": "20.04",
     "version": "0",
     "interpreter": "bash",
-    "distribution": "Ubuntu"
+    "distribution": "Ubuntu",
+    "assetDepends": [
+      {
+        "name": "python_packages",
+        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+        "folder": "/app_assets/python_packages/python_packages_v1.1.0",
+        "version": "1.1.0" 
+      }
+    ]
   },
   "access": {
     "allProjects": "VIEW",
