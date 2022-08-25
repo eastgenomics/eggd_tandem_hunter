@@ -9,8 +9,8 @@
 set -e -x -o pipefail
 
 # Install packages from the python asset
-pip3 install /pytz-*.whl /numpy-*.whl /pandas-*.whl
-
+#pip3 install /pytz-*.whl /numpy-*.whl /pandas-*.whl
+pip3 install pandas==1.1.3
 # Make directories to hold outputs
 mkdir /home/dnanexus/out
 mkdir /home/dnanexus/out/summary_csvs
