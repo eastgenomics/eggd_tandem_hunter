@@ -10,22 +10,28 @@ set -e -x -o pipefail
 
 # Install packages from the python asset
 #pip3 install /pytz-*.whl /numpy-*.whl /pandas-*.whl
-pip3 install pandas==1.1.3
+pip3 install pandas==1.1.3 #fix, should be installed from file
+pip3 install openpyxl
 # Make directories to hold outputs
 mkdir /home/dnanexus/out
-mkdir /home/dnanexus/out/summary_csvs
-mkdir /home/dnanexus/out/summary_xlsx
+mkdir /home/dnanexus/out/comparison_csv
+mkdir /home/dnanexus/out/comparison_xlsx
 
-# Download inputs from DNAnexus
-dx-download-all-inputs
-
+# Download inputs from DNAnexus in parallel, to go into /home/dnanexus/in/
+echo "download_inputs"
+dx-download-all-inputs --parallel
+echo "download_complete"
+ls /home/dnanexus/in/intervals/
 # run script for PTD prediction outputs
-python3 TandemHunter.py -F /home/dnanexus/in/coverage_files --intervals /home/dnanexus/in/intervals/*.json -O /home/dnanexus/out/summary_csvs $advanced_options
-
+echo "Tandemhunter_test"
+python3 TandemHunter.py -h
+echo "test_complete"
+python3 TandemHunter.py -B /home/dnanexus/in/coverage_files/ --intervals /home/dnanexus/in/intervals/* -O /home/dnanexus/out/comparison_csv $advanced_options
+echo "tandemhunter_done"
 # Run second script (if number of files greater than 1)
 # collate data into single dataframe
 #if f in ["$coverage_targets_file"]>1 ; then
-python3 generate_comparison_csv_to_xls.py --comparison_csv /home/dnanexus/out/summary_csvs/*.csv $run
-
+python3 generate_comparison_csv_to_xls.py --comparison_csv /home/dnanexus/out/comparison_csv/*.pertarget_.cvg_comparison.csv $run
+mv *comparison_csv.xlsx /home/dnanexus/out/comparison_xlsx
 # Upload outputs (from /home/dnanexus/out) to DNAnexus
 dx-upload-all-outputs --parallel
