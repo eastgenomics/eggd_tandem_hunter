@@ -10,7 +10,6 @@ import pty
 import subprocess
 import os
 import sys
-#import pytest
 
 import pandas as pd
 
