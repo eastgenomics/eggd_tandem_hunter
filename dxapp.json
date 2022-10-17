@@ -37,7 +37,7 @@
       "optional": true
     },
     {
-      "name": "run",
+      "name": "output_prefix",
       "label": "run name",
       "help": "run name to prefix output .xlsx file",
       "class": "string",
