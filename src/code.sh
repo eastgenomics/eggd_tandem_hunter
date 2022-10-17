@@ -24,7 +24,6 @@ echo "download_complete"
 ls /home/dnanexus/in/intervals/
 # run script for PTD prediction outputs
 echo "Tandemhunter_test"
-python3 TandemHunter.py -h
 echo "test_complete"
 python3 TandemHunter.py -B /home/dnanexus/in/coverage_files/ --intervals /home/dnanexus/in/intervals/* -O /home/dnanexus/out/comparison_csv $advanced_options
 echo "tandemhunter_done"
