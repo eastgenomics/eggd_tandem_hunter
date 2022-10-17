@@ -18,7 +18,7 @@
       "label": "Query coverage_file/s",
       "help": "Per target coverage file containing exon coordinates and normalised coverage values (pertarget_coverage.tsv)",
       "optional": false,
-      "class": "array:file",
+      "class": "array:file(s)",
       "patterns": ["*.pertarget_coverage.tsv"]
     },
     {
