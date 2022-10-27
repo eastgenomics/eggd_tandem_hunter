@@ -10,7 +10,7 @@ set -e -x -o pipefail
 
 # Install packages from the python asset
 #pip3 install /pytz-*.whl /numpy-*.whl /pandas-*.whl
-pip3 install pandas==1.1.3 #fix, should be installed from file
+pip3 download pandas==1.1.3
 pip3 install openpyxl
 # Make directories to hold outputs
 mkdir /home/dnanexus/out
