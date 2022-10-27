@@ -38,8 +38,8 @@
     },
     {
       "name": "output_prefix",
-      "label": "run name",
-      "help": "run name to prefix output .xlsx file",
+      "label": "output prefix",
+      "help": "prefix for output .xlsx file",
       "class": "string",
       "optional": true
     }
