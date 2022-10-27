@@ -23,10 +23,7 @@ dx-download-all-inputs --parallel
 echo "download_complete"
 ls /home/dnanexus/in/intervals/
 # run script for PTD prediction outputs
-echo "Tandemhunter_test"
-echo "test_complete"
 python3 TandemHunter.py -B /home/dnanexus/in/coverage_files/ --intervals /home/dnanexus/in/intervals/* -O /home/dnanexus/out/comparison_csv $advanced_options
-echo "tandemhunter_done"
 # Run second script
 # collate data into single dataframe
 python3 generate_comparison_csv_to_xls.py --comparison_csv /home/dnanexus/out/comparison_csv/*.pertarget_.cvg_comparison.csv $run
