@@ -10,12 +10,7 @@ set -e -x -o pipefail
 
 # Install packages from the python asset
 #pip3 install /pytz-*.whl /numpy-*.whl /pandas-*.whl
-pip3 install numpy-1.23.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
-pip3 install pandas-1.1.3-cp38-cp38-manylinux1_x86_64.whl
-pip3 install python_dateutil-2.8.2-py2.py3-none-any.whl
-pip3 install pytz-2022.5-py2.py3-none-any.whl
-pip3 install six-1.16.0-py2.py3-none-any.whl
-pip3 install openpyxl
+python3 -m pip install -q --no-index --no-deps  packages/*
 # Make directories to hold outputs
 mkdir /home/dnanexus/out
 mkdir /home/dnanexus/out/comparison_csv
