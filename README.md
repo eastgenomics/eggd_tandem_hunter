@@ -1,4 +1,4 @@
-# egg_tandem_hunter v1.0.0
+# eggd_tandem_hunter v2.0.0
 This app has been adapted in house to work for samples aligned to b38 reference.
 
 ## Requirements

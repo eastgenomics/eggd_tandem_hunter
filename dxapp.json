@@ -1,0 +1,90 @@
+{
+  "name": "eggd_tandem_hunter",
+  "summary": "Uses per target coverage files from Picard to calculate fold changes in specific exons for the detection of presumptive PTDs",
+  "properties": {
+    "github release": "v2.0.0"
+  },
+    "version": "2.0.0",
+  "authorizedUsers": [
+    "org-emee_1"
+  ],
+    "developers":[
+    "org-emee_1"
+  ],
+   "dxapi": "1.0.0",
+  "inputSpec": [
+    {
+      "name": "coverage_files",
+      "label": "Query coverage_file/s",
+      "help": "Per target coverage file containing exon coordinates and normalised coverage values (pertarget_coverage.tsv)",
+      "optional": false,
+      "class": "array:file(s)",
+      "patterns": ["*.pertarget_coverage.tsv"]
+    },
+    {
+      "name": "intervals",
+      "label": "JSON file",
+      "help": "JSON file containing containing intervals to compare coverage at (.json)",
+      "optional": false,
+      "class": "file",
+      "patterns": ["*.json"]
+    },
+    {
+      "name": "advanced_options",
+      "label": "Advanced command line options",
+      "help": "Advanced command line options that will be supplied directly to TandemHunter execution.",
+      "class": "string",
+      "optional": true
+    },
+    {
+      "name": "output_prefix",
+      "label": "output prefix",
+      "help": "prefix for output .xlsx file",
+      "class": "string",
+      "optional": true
+    }
+],
+ "outputSpec": [
+    {
+      "name": "comparison_csv",
+      "label": "csv files with TandemHunter outputs per sample (.cvg_comparison.csv)",
+      "class": "array:file"
+    },
+        {
+      "name": "comparison_xlsx",
+      "label": "output single .xlsx file with TandemHunter output (.cvg_comparison.csv)",
+      "class": "file"
+    }
+],
+ "runSpec": {
+    "systemRequirements": {
+      "*": {
+        "instanceType": "mem1_ssd1_v2_x2"
+      }
+    },
+    "timeoutPolicy": {
+      "*": {
+        "minutes": 30
+      }
+    },
+    "file": "src/code.sh",
+    "release": "20.04",
+    "version": "0",
+    "interpreter": "bash",
+    "distribution": "Ubuntu",
+    "assetDepends": [
+      {
+        "name": "python_packages",
+        "project": "project-Fkb6Gkj433GVVvj73J7x8KbV",
+        "folder": "/app_assets/python_packages/python_packages_v1.1.0",
+        "version": "1.1.0"
+      }
+    ]
+  },
+  "access": {
+    "allProjects": "VIEW",
+    "network": [
+      "*"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+[
+   {
+      "region1":{
+         "chrom":"chr11",
+         "start":118342351,
+         "end":118345055,
+         "name":"MLL_EXON3"
+      },
+      "region2":{
+         "chrom":"chr11",
+         "start":118373087,
+         "end":118377386,
+         "name":"MLL_EXON27"
+      }
+   }
+]
